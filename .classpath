@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="lib/brownAgent.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang3-3.1.jar"/>
 	<classpathentry kind="lib" path="lib/my_impl.jar"/>
+	<classpathentry kind="lib" path="lib/brendanAgent.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

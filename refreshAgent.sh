@@ -11,7 +11,7 @@ AGENT="brendanAgent"
 
 javac -cp "lib/*" brownAgent/*.java $AGENT/*.java
 
-jar -cf $AGENT.jar brownAgent/*.java $AGENT/*.class
+jar -cf $AGENT.jar brownAgent/*.class $AGENT/*.class
 
 mv $AGENT.jar lib/$AGENT.jar
 
