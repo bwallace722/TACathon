@@ -11,6 +11,7 @@ import tau.tac.adx.props.AdxQuery;
 import tau.tac.adx.report.demand.CampaignReport;
 
 public class NaiveAddBidder extends AddBidder {
+	
 	Map<Integer, CampaignData> myCampaigns;
 
 
