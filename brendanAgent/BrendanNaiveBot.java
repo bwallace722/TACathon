@@ -25,7 +25,7 @@ public class BrendanNaiveBot extends BrownAgent {
 			Queue<CampaignReport> campaignReports, double[] ucsLevels,
 			double[] ucsPrices, double[] qualityScores) {
 		// TODO Auto-generated method stub
-		return null;
+		return new NaiveUCSBidder(myCampaigns, campaignReports, qualityScores, qualityScores, qualityScores);
 	}
 
 	@Override

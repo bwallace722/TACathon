@@ -21,6 +21,8 @@ public class NaiveUCSBidder extends UCSBidder {
 	}
 
 	@Override
+	
+	
 	public double makeUCSBid(int day) {
 		if (day > 1) {
 			if (ucsLevels[day - 1] > targetUCSLevel) {
