@@ -7,7 +7,7 @@ import brownAgent.UCSBidder;
 import brownAgent.SampleAdNetworkProtected.CampaignData;
 import tau.tac.adx.report.demand.CampaignReport;
 
-public class NaiveUCSBidder extends UCSBidder {
+public class NaiveUCSBidder implements UCSBidder {
 	
 	private double targetUCSLevel = 0.6;
 	private double ucsBid = 1.0;
@@ -19,9 +19,6 @@ public class NaiveUCSBidder extends UCSBidder {
 			double[] ucsPrices, double[] qualityScores) {
 		this.ucsLevels = ucsLevels;
 	}
-
-	@Override
-	
 	
 	public double makeUCSBid(int day) {
 		if (day > 1) {

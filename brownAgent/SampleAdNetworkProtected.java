@@ -135,7 +135,7 @@ public abstract class SampleAdNetworkProtected extends Agent {
 			} else if (content instanceof AdxPublisherReport) {
 				handleAdxPublisherReport((AdxPublisherReport) content);
 			} else if (content instanceof SimulationStatus) {
-				//handleSimulationStatus((SimulationStatus) content);
+				handleSimulationStatus((SimulationStatus) content);
 			} else if (content instanceof PublisherCatalog) {
 				handlePublisherCatalog((PublisherCatalog) content);
 			} else if (content instanceof AdNetworkReport) {
@@ -145,7 +145,7 @@ public abstract class SampleAdNetworkProtected extends Agent {
 			} else if (content instanceof BankStatus) {
 				handleBankStatus((BankStatus) content);
 			} else if (content instanceof CampaignAuctionReport) {
-				hadnleCampaignAuctionReport((CampaignAuctionReport) content);
+				handleCampaignAuctionReport((CampaignAuctionReport) content);
 			} else {
 				System.out.println("UNKNOWN Message Received: " + content);
 			}
@@ -157,7 +157,14 @@ public abstract class SampleAdNetworkProtected extends Agent {
 		}
 	}
 
-	private void hadnleCampaignAuctionReport(CampaignAuctionReport content) {
+	private void handleSimulationStatus(SimulationStatus simulationStatus) {
+		System.out.println("Day " + day + " : Simulation Status Received");
+		sendBidAndAds();
+		System.out.println("Day " + day + " ended. Starting next day");
+		++day;
+	}
+	
+	private void handleCampaignAuctionReport(CampaignAuctionReport content) {
 		// ingoring
 	}
 

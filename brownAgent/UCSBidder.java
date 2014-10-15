@@ -1,6 +1,6 @@
 package brownAgent;
 
-public abstract class UCSBidder {
+public abstract interface UCSBidder {
 
 	public abstract double makeUCSBid(int day);
 

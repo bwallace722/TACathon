@@ -10,7 +10,7 @@ import tau.tac.adx.props.AdxBidBundle;
 import tau.tac.adx.props.AdxQuery;
 import tau.tac.adx.report.demand.CampaignReport;
 
-public class NaiveAddBidder extends AddBidder {
+public class NaiveAddBidder implements AddBidder {
 	
 	Map<Integer, CampaignData> myCampaigns;
 
@@ -21,7 +21,6 @@ public class NaiveAddBidder extends AddBidder {
 		this.myCampaigns = myCampaigns;
 	}
 
-	@Override
 	public void setBids(AdxBidBundle bidBundle, int dayBiddingFor) {
 		for (CampaignData c : myCampaigns.values()) {
 			if (dayBiddingFor <= c.dayEnd) {
